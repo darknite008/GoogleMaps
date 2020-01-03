@@ -52,8 +52,8 @@ CameraUpdate center,zoom;
                 if (position>-1){
                     loadMap(position);}
                     else{
-                    Toast.makeText(SearchPlaces.this, "Loacation not found by name :"
-                            +etCity.getText().toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SearchPlaces.this, "Location not found by name :"
+                            +etCity.getText().toString()+position, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -80,7 +80,7 @@ CameraUpdate center,zoom;
     private int SearchArrayList(String name) {
        for(int i=0;i<latitudeLongitudesList.size();i++){
            if(latitudeLongitudesList.get(i).getMarker().contains(name)){
-               return -1;
+               return 1;
            }
        }
         return -1;
@@ -88,7 +88,7 @@ CameraUpdate center,zoom;
 
     private void fillArrayListAndSetAdapter() {
     latitudeLongitudesList =new ArrayList<>();
-    latitudeLongitudesList.add(new LatitudeLongitude(27.7052012,85.3276928,"Global Bank"));
+    latitudeLongitudesList.add(new LatitudeLongitude(27.7046496,85.3304344,"Global Bank"));
     latitudeLongitudesList.add(new LatitudeLongitude(27.7134481,85.33241992,"Nagpokhari"));
     latitudeLongitudesList.add(new LatitudeLongitude(27.7127827,85.3265391,"Hotel Brihaspati"));
 
