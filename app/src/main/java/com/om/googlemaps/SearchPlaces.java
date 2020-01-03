@@ -80,7 +80,7 @@ CameraUpdate center,zoom;
     private int SearchArrayList(String name) {
        for(int i=0;i<latitudeLongitudesList.size();i++){
            if(latitudeLongitudesList.get(i).getMarker().contains(name)){
-               return 1;
+               return i;
            }
        }
         return -1;
